@@ -25,6 +25,10 @@ app.use( (req, res, next) => {
     next();
 });
 
+app.use("/", (req, res, next) => {
+    res.status(200).json({text: "hello"});
+});
+
 app.use("/products", productsRouter);
 
 app.use( (req, res, next) => {
